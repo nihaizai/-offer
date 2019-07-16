@@ -84,7 +84,5 @@ int main(){
 	Test(rs5, 5);
 	int rs6 = c.deleteHeadF2();
 	Test(rs6, -1);
-
-
 	return 0;
 }
