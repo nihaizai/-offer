@@ -33,12 +33,20 @@ public:
 
 	//时间复杂度 O(n) 空间复杂度O(1)
 	void reOrderArrayF2(vector<int> &array){
+
+		//======= 若无这个可能出现段错误====
+		if (array.size() <= 0){
+			return;
+		}
+     //==============
+
+
 		int begin = 0;
-		/*while (array[begin] & 1 != 0){
+		while (array[begin] & 1 != 0){
 			begin++;
 		}
-		int end = begin + 1;*/
-		int end = 0;
+		int end = begin + 1;
+		//int end = 0;
 
 		while ( end <array.size()){
 			if (array[end]  % 2 == 0){
@@ -73,7 +81,7 @@ public:
 
 int main(){
 	Solution s;
-	vector<int> test = {2,4,6,1}; 
+	vector<int> test = {2}; 
 	s.reOrderArrayF3(test);
 	for (int i = 0; i < test.size(); i++){
 		cout << test[i] << "   ";
@@ -88,8 +96,3 @@ int main(){
 	//cout <<end << endl;
 	return 0;
 }
-
-
-参考链接：
-博客https://blog.csdn.net/lyl194458/article/details/89714872
-    https://blog.csdn.net/zhangshk_/article/details/81190870
